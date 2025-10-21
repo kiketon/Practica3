@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Juegos LA DOCE – Carrito</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header__row">
+      <a class="logo" href="index.html" aria-label="Ir al inicio">
+        <img src="images/logo.png" alt="Juegos LA DOCE" />
+      </a>
+      <a class="brand" href="index.html">Juegos <strong>LA DOCE</strong></a>
+
+      <nav class="nav">
+        <a class="nav__link" href="catalogo.html">Productos</a>
+        <a class="nav__link" href="index.html#contacto">Contacto</a>
+        <a class="nav__link nav__link--pill" href="index.html">Inicio</a>
+      </nav>
+
+      <span class="cart" aria-hidden="true">
+        <svg viewBox="0 0 24 24" class="icon"><path d="M7 18a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm10 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM3 3h2l2.6 10.39A3 3 0 0 0 10.5 16h7.88a3 3 0 0 0 2.92-2.35L23 6H6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+    </div>
+  </header>
+
+  <main class="page-main">
+    <section class="container cart-page">
+      <h1 class="page-title">Carrito de la compra</h1>
+
+      <div class="cart-layout">
+        <!-- Lista de items -->
+        <section class="cart-list">
+          <!-- Cupón Diario -->
+          <article class="cart-item">
+            <div class="thumb has-img">
+              <img src="images/CDiario.png" alt="Cupón Diario">
+            </div>
+            <div class="cart-item__info">
+              <h3>Cupón Diario</h3>
+              <p class="muted">$10</p>
+            </div>
+            <div class="qty">
+              <button class="btn btn--ghost" disabled>-</button>
+              <span>2</span>
+              <button class="btn btn--ghost" disabled>+</button>
+            </div>
+            <div class="subtotal">$20</div>
+          </article>
+
+          <!-- Mega Sorteo Anual -->
+          <article class="cart-item">
+            <div class="thumb has-img">
+              <img src="images/Mmillonario.png" alt="Mega Sorteo Anual">
+            </div>
+            <div class="cart-item__info">
+              <h3>Mega Sorteo Anual</h3>
+              <p class="muted">$50</p>
+            </div>
+            <div class="qty">
+              <button class="btn btn--ghost" disabled>-</button>
+              <span>1</span>
+              <button class="btn btn--ghost" disabled>+</button>
+            </div>
+            <div class="subtotal">$50</div>
+          </article>
+
+          <!-- Rasca Verano -->
+          <article class="cart-item">
+            <div class="thumb has-img">
+              <img src="images/Rverano.png" alt="Rasca Verano">
+            </div>
+            <div class="cart-item__info">
+              <h3>Rasca Verano</h3>
+              <p class="muted">$15</p>
+            </div>
+            <div class="qty">
+              <button class="btn btn--ghost" disabled>-</button>
+              <span>3</span>
+              <button class="btn btn--ghost" disabled>+</button>
+            </div>
+            <div class="subtotal">$45</div>
+          </article>
+
+
+          <div class="cart-actions">
+            <a class="btn btn--ghost" href="catalogo.html">Seguir comprando</a>
+            <button class="btn btn--ghost" disabled>Vaciar carrito</button>
+          </div>
+        </section>
+
+        <!-- Resumen -->
+        <aside class="summary">
+          <h2>Carrito</h2>
+          <dl class="summary__row"><dt>Subtotal</dt><dd>$490</dd></dl>
+          <dl class="summary__row"><dt>Impuestos</dt><dd>$15</dd></dl>
+          <hr />
+          <dl class="summary__row summary__total"><dt>Total</dt><dd>$505</dd></dl>
+
+          <a class="btn btn--primary full" href="#">Proceder al pago</a>
+          <button class="btn btn--paypal full" type="button">Pagar con PayPal</button>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer igual que el index (versión compacta por CSS) -->
+  <footer class="site-footer site-footer--dark">
+  <div class="container footer-cols">
+    <!-- Col 1 -->
+    <div class="footer-col">
+      <h4 class="footer-title">NUESTRAS LOTERÍAS</h4>
+      <ul class="footer-list">
+        <li><a href="#">Cupón Extra de Navidad</a></li>
+        <li><a href="#">11/11 de la ONCE</a></li>
+        <li><a href="#">Eurojackpot</a></li>
+        <li><a href="#">Super 11</a></li>
+        <li><a href="#">Mi Día</a></li>
+        <li><a href="#">Triplex de la ONCE</a></li>
+        <li><a href="#">Sueldoz Fin de Semana</a></li>
+        <li><a href="#">Cupón Diario</a></li>
+        <li><a href="#">Cuponazo</a></li>
+        <li><a href="#">Loterías</a></li>
+      </ul>
+
+      <h5 class="footer-subtitle">NUESTROS RASCAS</h5>
+      <ul class="footer-list">
+        <li><a href="#">7 de la Suerte</a></li>
+        <li><a href="#">Monopoly</a></li>
+        <li><a href="#">Súper Colores Halloween</a></li>
+        <li><a href="#">Ver más rasca</a></li>
+      </ul>
+    </div>
+
+    <!-- Col 2 -->
+    <div class="footer-col">
+      <h4 class="footer-title">RESULTADOS</h4>
+      <ul class="footer-list">
+        <li><a href="#">Últimos resultados</a></li>
+        <li><a href="#">Resultados de Cupones</a></li>
+        <li><a href="#">Eurojackpot</a></li>
+        <li><a href="#">Mi Día</a></li>
+        <li><a href="#">Super 11</a></li>
+        <li><a href="#">Triplex de la ONCE</a></li>
+        <li><a href="#">Extra de Navidad</a></li>
+        <li><a href="#">11/11 de la ONCE</a></li>
+        <li><a href="#">Comprobador de resultados</a></li>
+        <li><a href="#">Estadísticas</a></li>
+      </ul>
+
+      <h5 class="footer-subtitle">APPS / COMPLEMENTOS</h5>
+      <ul class="footer-list">
+        <li><a href="#">Mi Vendedor ONCE</a></li>
+        <li><a href="#">JuegosONCE: Sorteos de la ONCE</a></li>
+      </ul>
+    </div>
+
+    <!-- Col 3 -->
+    <div class="footer-col">
+      <h4 class="footer-title">JUEGO MÁS SEGURO</h4>
+      <ul class="footer-list">
+        <li><a href="#">Juego más seguro</a></li>
+        <li><a href="#">Autocontrol</a></li>
+        <li><a href="#">Prohibición menores de edad</a></li>
+        <li><a href="#">Resumen protocolo de conductas</a></li>
+      </ul>
+
+      <h4 class="footer-title">SOBRE JUEGOSONCE</h4>
+      <ul class="footer-list">
+        <li><a href="#">¿Quiénes somos?</a></li>
+        <li><a href="#">Grupo Social ONCE</a></li>
+        <li><a href="#">Accesibilidad</a></li>
+        <li><a href="#">Quejas y sugerencias</a></li>
+        <li><a href="#">Preguntas frecuentes</a></li>
+        <li><a href="#">Información legal</a></li>
+      </ul>
+    </div>
+
+    <!-- Col 4 (contacto + CTA + redes + sellos) -->
+    <div class="footer-col footer-col--right">
+      <h4 class="footer-title">ATENCIÓN AL CLIENTE</h4>
+      <p class="footer-phone">91 125 34 12</p>
+      <a class="footer-mail" href="mailto:sacjente@juegosonce.es">sacjente@juegosonce.es</a>
+
+      <a class="btn btn--cta" href="#">Regístrate y empieza a jugar</a>
+
+      <div class="footer-social">
+        <a aria-label="Facebook" href="#"><svg viewBox="0 0 24 24"><path d="M13 22v-8h3l1-4h-4V7c0-1.1.9-2 2-2h2V1h-3a5 5 0 0 0-5 5v3H6v4h3v8h4Z"/></svg></a>
+        <a aria-label="Instagram" href="#"><svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm5 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm6-1.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Z"/><circle cx="12" cy="12" r="3.5"/></svg></a>
+        <a aria-label="X / Twitter" href="#"><svg viewBox="0 0 24 24"><path d="M3 3h4l5 7 5-7h4l-8 10 8 8h-4l-6-7-6 7H3l8-10L3 3Z"/></svg></a>
+        <a aria-label="YouTube" href="#"><svg viewBox="0 0 24 24"><path d="M23 8.5v7a3.5 3.5 0 0 1-3.5 3.5h-15A3.5 3.5 0 0 1 1 15.5v-7A3.5 3.5 0 0 1 4.5 5h15A3.5 3.5 0 0 1 23 8.5ZM10 9v6l6-3-6-3Z"/></svg></a>
+      </div>
+
+      <div class="footer-badges">
+        <img src="images/Juego_Responsable.png" alt="Juego responsable +18" />
+      </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container footer-bottom__row">
+      <p>© 2025 Juegos <strong>LA DOCE</strong>. Sitio adaptado a todos los dispositivos.</p>
+      <ul class="footer-legal">
+        <li><a href="#">Aviso legal</a></li>
+        <li><a href="#">Política de cookies</a></li>
+        <li><a href="#">Privacidad</a></li>
+        <li><a href="#">Condiciones de uso</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

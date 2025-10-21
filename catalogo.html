@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Juegos LA DOCE – Catálogo</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header__row">
+      <a class="logo" href="./index.html" aria-label="Ir al inicio">
+        <img src="images/logo.png" alt="Juegos LA DOCE">
+      </a>
+
+      <a class="brand" href="./index.html">Juegos <strong>LA DOCE</strong></a>
+
+      <nav class="nav">
+        <a class="nav__link nav__link--pill" href="./catalogo.html">Productos</a>
+        <a class="nav__link" href="#contacto">Contacto</a>
+        <a class="nav__link" href="./index.html">Inicio</a>
+      </nav>
+
+      <a class="cart" href="./carrito.html" aria-label="Carrito">
+        <svg viewBox="0 0 24 24" class="icon">
+          <path d="M7 18a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm10 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM3 3h2l2.6 10.39A3 3 0 0 0 10.5 16h7.88a3 3 0 0 0 2.92-2.35L23 6H6"
+                fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+  </header>
+
+  <!-- Contenido principal -->
+  <main class="page-main">
+    <section class="products-page">
+      <div class="container products-layout">
+        <!-- Filtros -->
+        <aside class="filters">
+          <div class="filters__header">
+            <h3>Filtros</h3>
+            <button class="btn btn--ghost small">Limpiar</button>
+          </div>
+
+          <div class="filters__block">
+            <h4>Categoria</h4>
+            <ul class="list">
+              <li><label><input type="checkbox" /> Diario</label></li>
+              <li><label><input type="checkbox" /> Sorteo</label></li>
+              <li><label><input type="checkbox" /> Instantáneo</label></li>
+            </ul>
+          </div>
+
+          <div class="filters__block">
+            <h4>Precio</h4>
+            <ul class="list">
+              <li><label><input type="checkbox" /> $10 - $20</label></li>
+              <li><label><input type="checkbox" /> $20 - $40</label></li>
+              <li><label><input type="checkbox" /> $40 - $60</label></li>
+            </ul>
+          </div>
+
+          <button class="btn btn--primary full">Aplicar filtros</button>
+        </aside>
+
+        <!-- Catálogo -->
+        <section class="catalog">
+          <div class="catalog__toolbar">
+            <h2>Juegos LA DOCE</h2>
+            <div class="toolbar__right">
+              <select class="select">
+                <option>Ordenar por</option>
+                <option>Precio ascendente</option>
+                <option>Precio descendente</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Grid de productos -->
+          <div class="grid">
+            <article class="card">
+              <div class="card__media">
+                <img src="images/CDiario.png" alt="Cupón Diario">
+              </div>
+              <h3 class="card__title">Cupón Diario</h3>
+              <p class="card__meta">Gana hasta $500,000</p>
+              <div class="card__bottom">
+                <span class="price">$10</span>
+                <a class="btn btn--primary small" href="./carrito.html">Comprar</a>
+              </div>
+            </article>
+
+            <article class="card card--highlight">
+              <div class="card__media">
+                <img src="images/Cnavidad.png" alt="Cupón de Navidad">
+              </div>
+              <h3 class="card__title">Cupón de Navidad</h3>
+              <p class="card__meta">Premio especial $400,000</p>
+              <div class="card__bottom">
+                <span class="price">$10</span>
+                <a class="btn btn--primary small" href="./carrito.html">Comprar</a>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card__media">
+                <img src="images/Sdiario.png" alt="Sorteo del mes">
+              </div>
+              <h3 class="card__title">Sorteo del mes</h3>
+              <p class="card__meta">Premio mayor $6,000,000</p>
+              <div class="card__bottom">
+                <span class="price">$20</span>
+                <a class="btn btn--primary small" href="./carrito.html">Comprar</a>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card__media">
+                <img src="images/Rhalolwen.png" alt="Rasca Halloween">
+              </div>
+              <h3 class="card__title">Rasca Halloween</h3>
+              <p class="card__meta">Premio instantáneo $200,000</p>
+              <div class="card__bottom">
+                <span class="price">$0,5</span>
+                <a class="btn btn--primary small" href="./carrito.html">Comprar</a>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card__media">
+                <img src="images/Tjackpot.png" alt="Triple Jackpot">
+              </div>
+              <h3 class="card__title">Triple Jackpot</h3>
+              <p class="card__meta">Gana 3 premios en 1</p>
+              <div class="card__bottom">
+                <span class="price">$40</span>
+                <a class="btn btn--primary small" href="./carrito.html">Comprar</a>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card__media">
+                <img src="images/Pdia.png" alt="Premio del Día">
+              </div>
+              <h3 class="card__title">Premio del Día</h3>
+              <p class="card__meta">Gana hasta $3,000</p>
+              <div class="card__bottom">
+                <span class="price">$10</span>
+                <a class="btn btn--primary small" href="./carrito.html">Comprar</a>
+              </div>
+            </article>
+
+            <!-- NUEVOS PRODUCTOS -->
+            <article class="card">
+              <div class="card__media">
+                <img src="images/Rverano.png" alt="Rasca Verano">
+              </div>
+              <h3 class="card__title">Rasca Verano</h3>
+              <p class="card__meta">Premio al instante hasta $150,000</p>
+              <div class="card__bottom">
+                <span class="price">$15</span>
+                <a class="btn btn--primary small" href="./carrito.html">Comprar</a>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card__media">
+                <img src="images/Mmillonario.png" alt="Mega Sorteo Anual">
+              </div>
+              <h3 class="card__title">Mega Sorteo Anual</h3>
+              <p class="card__meta">Premio mayor $10,000,000</p>
+              <div class="card__bottom">
+                <span class="price">$50</span>
+                <a class="btn btn--primary small" href="./carrito.html">Comprar</a>
+              </div>
+            </article>
+
+            <article class="card card--highlight">
+              <div class="card__media">
+                <img src="images/Caño.png" alt="Cupón de Año Nuevo">
+              </div>
+              <h3 class="card__title">Cupón de Año Nuevo</h3>
+              <p class="card__meta">Empieza el año ganando $250,000</p>
+              <div class="card__bottom">
+                <span class="price">$20</span>
+                <a class="btn btn--primary small" href="./carrito.html">Comprar</a>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer site-footer--dark">
+  <div class="container footer-cols">
+    <!-- Col 1 -->
+    <div class="footer-col">
+      <h4 class="footer-title">NUESTRAS LOTERÍAS</h4>
+      <ul class="footer-list">
+        <li><a href="#">Cupón Extra de Navidad</a></li>
+        <li><a href="#">11/11 de la ONCE</a></li>
+        <li><a href="#">Eurojackpot</a></li>
+        <li><a href="#">Super 11</a></li>
+        <li><a href="#">Mi Día</a></li>
+        <li><a href="#">Triplex de la ONCE</a></li>
+        <li><a href="#">Sueldoz Fin de Semana</a></li>
+        <li><a href="#">Cupón Diario</a></li>
+        <li><a href="#">Cuponazo</a></li>
+        <li><a href="#">Loterías</a></li>
+      </ul>
+
+      <h5 class="footer-subtitle">NUESTROS RASCAS</h5>
+      <ul class="footer-list">
+        <li><a href="#">7 de la Suerte</a></li>
+        <li><a href="#">Monopoly</a></li>
+        <li><a href="#">Súper Colores Halloween</a></li>
+        <li><a href="#">Ver más rasca</a></li>
+      </ul>
+    </div>
+
+    <!-- Col 2 -->
+    <div class="footer-col">
+      <h4 class="footer-title">RESULTADOS</h4>
+      <ul class="footer-list">
+        <li><a href="#">Últimos resultados</a></li>
+        <li><a href="#">Resultados de Cupones</a></li>
+        <li><a href="#">Eurojackpot</a></li>
+        <li><a href="#">Mi Día</a></li>
+        <li><a href="#">Super 11</a></li>
+        <li><a href="#">Triplex de la ONCE</a></li>
+        <li><a href="#">Extra de Navidad</a></li>
+        <li><a href="#">11/11 de la ONCE</a></li>
+        <li><a href="#">Comprobador de resultados</a></li>
+        <li><a href="#">Estadísticas</a></li>
+      </ul>
+
+      <h5 class="footer-subtitle">APPS / COMPLEMENTOS</h5>
+      <ul class="footer-list">
+        <li><a href="#">Mi Vendedor ONCE</a></li>
+        <li><a href="#">JuegosONCE: Sorteos de la ONCE</a></li>
+      </ul>
+    </div>
+
+    <!-- Col 3 -->
+    <div class="footer-col">
+      <h4 class="footer-title">JUEGO MÁS SEGURO</h4>
+      <ul class="footer-list">
+        <li><a href="#">Juego más seguro</a></li>
+        <li><a href="#">Autocontrol</a></li>
+        <li><a href="#">Prohibición menores de edad</a></li>
+        <li><a href="#">Resumen protocolo de conductas</a></li>
+      </ul>
+
+      <h4 class="footer-title">SOBRE JUEGOSONCE</h4>
+      <ul class="footer-list">
+        <li><a href="#">¿Quiénes somos?</a></li>
+        <li><a href="#">Grupo Social ONCE</a></li>
+        <li><a href="#">Accesibilidad</a></li>
+        <li><a href="#">Quejas y sugerencias</a></li>
+        <li><a href="#">Preguntas frecuentes</a></li>
+        <li><a href="#">Información legal</a></li>
+      </ul>
+    </div>
+
+    <!-- Col 4 (contacto + CTA + redes + sellos) -->
+    <div class="footer-col footer-col--right">
+      <h4 class="footer-title">ATENCIÓN AL CLIENTE</h4>
+      <p class="footer-phone">91 125 34 12</p>
+      <a class="footer-mail" href="mailto:sacjente@juegosonce.es">sacjente@juegosonce.es</a>
+
+      <a class="btn btn--cta" href="#">Regístrate y empieza a jugar</a>
+
+      <div class="footer-social">
+        <a aria-label="Facebook" href="#"><svg viewBox="0 0 24 24"><path d="M13 22v-8h3l1-4h-4V7c0-1.1.9-2 2-2h2V1h-3a5 5 0 0 0-5 5v3H6v4h3v8h4Z"/></svg></a>
+        <a aria-label="Instagram" href="#"><svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm5 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm6-1.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Z"/><circle cx="12" cy="12" r="3.5"/></svg></a>
+        <a aria-label="X / Twitter" href="#"><svg viewBox="0 0 24 24"><path d="M3 3h4l5 7 5-7h4l-8 10 8 8h-4l-6-7-6 7H3l8-10L3 3Z"/></svg></a>
+        <a aria-label="YouTube" href="#"><svg viewBox="0 0 24 24"><path d="M23 8.5v7a3.5 3.5 0 0 1-3.5 3.5h-15A3.5 3.5 0 0 1 1 15.5v-7A3.5 3.5 0 0 1 4.5 5h15A3.5 3.5 0 0 1 23 8.5ZM10 9v6l6-3-6-3Z"/></svg></a>
+      </div>
+
+      <div class="footer-badges">
+        <img src="images/Juego_Responsable.png" alt="Juego responsable +18" />
+      </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container footer-bottom__row">
+      <p>© 2025 Juegos <strong>LA DOCE</strong>. Sitio adaptado a todos los dispositivos.</p>
+      <ul class="footer-legal">
+        <li><a href="#">Aviso legal</a></li>
+        <li><a href="#">Política de cookies</a></li>
+        <li><a href="#">Privacidad</a></li>
+        <li><a href="#">Condiciones de uso</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
