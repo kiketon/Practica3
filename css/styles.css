@@ -1,9 +1,9 @@
 /* ===== Reset + Variables ===== */
 :root{
-  --brand:#f05a59;     /* barra superior */
+  --brand:#6868d3;     /* barra superior */
   --paper:#fde9b6;     /* hero */
   --accent:#f39c12;    /* botones principales */
-  --bg:#e9a42a;        /* fondo listado */
+  --bg:#af7a1d;        /* fondo listado */
   --ink:#1f2937;       /* texto principal */
   --muted:#6b7280;     /* texto secundario */
   --surface:#ffffff;   /* tarjetas */
@@ -39,7 +39,7 @@ img{max-width:100%;display:block}
   background:var(--brand);
   color:#fff;
   position:sticky; top:0; z-index:10;
-  border-bottom:4px solid #e04b49;
+  border-bottom:4px solid #6549e0;
 }
 .header__row{display:flex;align-items:center;gap:16px;min-height:var(--h)}
 .logo img{height:28px;display:block}
