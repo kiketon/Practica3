@@ -1,7 +1,7 @@
 /* ===== Reset + Variables ===== */
 :root{
   --brand:#6868d3;
-  --paper:#fde9b6;
+  --paper:#bcc331;
   --accent:#f39c12;
   --bg:#af7a1d;
   --ink:#1f2937;
@@ -21,7 +21,7 @@ body{
   flex-direction:column;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji";
   color:var(--ink);
-  background:#fff;
+  background:var(--paper);
   line-height:1.5;
 }
 
@@ -79,22 +79,63 @@ img{max-width:100%;display:block}
   flex-direction:column;
 }
 
+/* ===== CARRUSEL LA DOCE (500x400px) ===== */
+.carousel{
+  width:50%;
+  margin:20px auto;
+  overflow:hidden;
+  border-radius:20px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.25);
+  background:#000;
+}
+
+.carousel__track{
+  display:flex;
+  max-width:1100px;
+  margin: 0 auto 50px;
+  animation: slideCarousel 20s infinite ease-in-out;
+}
+
+.carousel__slide{
+  flex:0 0 100%;
+}
+
+.carousel__slide img{
+  width:100%;
+  height:auto;     /* 👉 ya no las forzamos a 400px */
+  display:block;
+  object-fit: cover;
+}
+
+
+@keyframes slideCarousel{
+  0%,10%{ transform:translateX(0); }
+  20%,30%{ transform:translateX(-100%); }
+  40%,50%{ transform:translateX(-200%); }
+  60%,70%{ transform:translateX(-300%); }
+  80%,90%{ transform:translateX(-400%); }
+  100%{ transform:translateX(0); }
+}
+
 /* ===== Hero (solo index) ===== */
 .hero{
   flex:1;
   background:var(--paper);
   display:flex;
+  flex-direction:column;
   align-items:center;
   justify-content:center;
   text-align:center;
 }
+
 .hero__content{
   display:flex;
   flex-direction:column;
   align-items:center;
   gap:10px;
-  padding:48px 0;
+  padding:32px 0 16px;
 }
+
 .hero h1{font-size:48px;margin:0}
 .hero__subtitle{margin:0 0 12px;font-size:1.2rem}
 
@@ -151,3 +192,161 @@ img{max-width:100%;display:block}
 .footer-legal{ display:flex; gap:1rem; list-style:none; margin:0; padding:0; }
 .footer-legal a{ opacity:.85; }
 .footer-legal a:hover{ opacity:1; }
+
+/* ===== Bloque promo redes sociales / labor social ===== */
+.promo{
+  background:var(--paper);
+  padding:40px 0 48px;
+}
+
+.promo__grid{
+  display:flex;
+  flex-direction:column;
+  gap:24px;
+}
+
+.promo-card{
+  border-radius:32px;
+  padding:32px 40px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+}
+
+/* Tarjeta redes sociales tipo ONCE */
+.promo-card--social{
+  background:#e9a92c;
+  color:#111;
+}
+
+.promo-card__text h2{
+  margin:0 0 8px;
+  font-size:2rem;
+}
+
+.promo-card__text p{
+  margin:0;
+  max-width:32rem;
+  font-size:1rem;
+}
+
+/* Iconos redondos */
+.promo-card__icons{
+  display:flex;
+  gap:18px;
+  flex-wrap:wrap;
+}
+
+.promo-icon{
+  width:64px;
+  height:64px;
+  border-radius:50%;
+  background:#ffd600;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+}
+
+.promo-icon svg{
+  width:32px;
+  height:32px;
+  fill:#000;
+}
+
+/* Tarjeta labor social */
+.promo-card--impact{
+  background:#e9a92c;
+  color:#111;
+}
+
+.promo-card--impact .promo-card__text p{
+  max-width:34rem;
+}
+
+.btn--dark{
+  background:#333;
+  color:#fff;
+  border-color:#00000033;
+}
+
+.btn--dark:hover{
+  filter:brightness(1.1);
+}
+
+/* Responsive promo */
+@media (max-width: 900px){
+  .promo-card{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .promo-card__icons{
+    justify-content:flex-start;
+  }
+}
+
+@media (max-width: 600px){
+  .promo-card{
+    padding:24px 20px;
+    border-radius:24px;
+  }
+
+  .promo-card__text h2{
+    font-size:1.6rem;
+  }
+}
+
+/* Contenedor que hace que el vídeo sea responsive */
+.promo-video{
+  position:relative;
+  width:100%;
+  max-width:600px;
+  margin:20px 0;
+  padding-bottom:56.25%; /* relación 16:9 */
+  border-radius:16px;
+  overflow:hidden;
+}
+
+/* iframe responsive */
+.promo-video iframe{
+  position:absolute;
+  top:0; left:0;
+  width:100%;
+  height:100%;
+  border:none;
+  border-radius:16px;
+}
+
+/* AUDIO (solo donde lo uses) */
+.hero__actions{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:14px;
+  margin-top:20px;
+}
+
+.hero-audio{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:6px;
+}
+
+.hero-audio__label{
+  font-size:.9rem;
+  color:#444;
+}
+
+.hero-audio audio{
+  max-width:260px;
+  border-radius:30px;
+}
+
+@media (max-width:600px){
+  .hero-audio audio{
+    width:100%;
+  }
+}

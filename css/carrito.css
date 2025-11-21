@@ -1,7 +1,7 @@
 /* ===== Reset + Variables ===== */
 :root{
   --brand:#6868d3;
-  --paper:#fde9b6;
+  --paper:#bcc331;
   --accent:#f39c12;
   --bg:#af7a1d;
   --ink:#1f2937;
@@ -11,6 +11,7 @@
   --highlight:#7c3aed;
   --radius:14px;
 }
+
 
 *{box-sizing:border-box}
 html,body{margin:0;padding:0;height:100%}
@@ -77,7 +78,7 @@ img{max-width:100%;display:block}
   flex:1;
   display:flex;
   flex-direction:column;
-  background:#e3a53a; /* color especial para carrito */
+  background:#bcc331; /* color especial para carrito */
 }
 
 /* ===== Carrito ===== */
