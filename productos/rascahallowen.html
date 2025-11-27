@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Juegos LA DOCE – Rasca de Hallowen</title>
+  <!-- CSS sólo productos -->
+  <link rel="stylesheet" href="../css/productos.css"/>
+  <link rel="icon" href="logos.ico" type="image/x-icon">
+</head>
+<body>
+  <!-- HEADER igual al resto -->
+  <header class="site-header">
+    <div class="container header__row">
+      <a class="logo" href="index.html" aria-label="Ir al inicio">
+        <img src="/images/logos.png.png" alt="Juegos LA DOCE" />
+      </a>
+      <a class="brand" href="/index.html">Juegos <strong>LA DOCE</strong></a>
+
+      <nav class="nav">
+        <a class="nav__link" href="/index.html">Inicio</a>
+        <a class="nav__link nav__link--pill" href="/catalogo.html">Productos</a>
+      </nav>
+
+      <span class="cart" aria-hidden="true">
+        <svg viewBox="0 0 24 24" class="icon">
+          <path d="M7 18a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm10 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM3 3h2l2.6 10.39A3 3 0 0 0 10.5 16h7.88a3 3 0 0 0 2.92-2.35L23 6H6"
+                fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+    </div>
+  </header>
+
+  <main class="page-main">
+    <section class="container">
+      <h1 class="product-page__title">Jugar al Rasca de Hallowen</h1>
+
+      <div class="product-layout">
+        <!-- COLUMNA IZQUIERDA: HERO DEL JUEGO -->
+        <aside class="product-hero">
+          <div class="product-hero__image">
+            <!-- Cambia la imagen por la del producto -->
+            <img src="/images/Rhalolwen.png" alt="Cupón Diario">
+          </div>
+
+          <div class="product-hero__body">
+            <span class="chip">Próximo sorteo: Martes, 31 de noviembre</span>
+
+            <h2 class="product-hero__title">Bote del día</h2>
+            <span class="product-hero__jackpot">200.000 €</span>
+
+            <div class="product-hero__meta">
+              <p class="muted">
+                Juega al clásico Rasca de Hallowen por sólo 3,00 $ y
+                participa en el sorteo con 5 cifras y serie.
+              </p>
+              <p class="muted">
+                Elige tu combinación y decide cuántos sorteos quieres jugar.
+              </p>
+            </div>
+          </div>
+        </aside>
+
+        <!-- COLUMNA DERECHA: CONFIGURAR APUESTA -->
+        <section class="product-config">
+          <!-- Tabs modo de juego (sólo visual, sin JS obligatorio) -->
+          <div class="product-tabs" aria-label="Tipo de combinación">
+            <button class="is-active" type="button">Sencilla</button>
+            <button type="button">Múltiple</button>
+            <button type="button">Favoritas</button>
+          </div>
+
+          <!-- Combinación 1 -->
+          <article class="combo-card">
+            <header class="combo-card__header">
+              <div>
+                <span class="combo-title">Combinación 1</span>
+                <span class="muted"> • Automática</span>
+              </div>
+              <div class="combo-actions">
+                <span>Repetir</span>
+                <span>Limpiar</span>
+              </div>
+            </header>
+
+            <!-- Números de ejemplo, sólo visual -->
+            <div class="number-row">
+              <span class="ball">04</span>
+              <span class="ball">12</span>
+              <span class="ball">23</span>
+              <span class="ball">37</span>
+              <span class="ball">89</span>
+              <span class="ball ball--highlight">S</span>
+            </div>
+
+            <!-- Cuántos sorteos jugar -->
+            <div class="draws">
+              <div>
+                <strong>¿Cuántos sorteos quieres jugar?</strong>
+              </div>
+              <div class="draws__controls">
+                <button type="button" aria-label="Menos sorteos">−</button>
+                <span id="draw-count">1 sorteo</span>
+                <button type="button" aria-label="Más sorteos">+</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- BARRA RESUMEN INFERIOR -->
+          <footer class="product-summary">
+            <div class="product-summary__info">
+              <span class="muted">Rasca de Hallowen</span>
+              <span class="muted">Precio por apuesta: 3,00 $</span>
+            </div>
+            <div class="product-summary__info">
+              <span class="muted">Total a pagar</span>
+              <span class="product-summary__price" id="total-price">3,00 $</span>
+            </div>
+            <div class="product-summary__actions">
+              <a href="/catalogo.html" class="btn btn--ghost">Volver al catálogo</a>
+              <a href="/carrito.html" class="btn btn--primary">Añadir al carrito</a>
+            </div>
+          </footer>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer site-footer--dark">
+    <div class="container footer-cols">
+      <!-- Col 1 -->
+      <div class="footer-col">
+        <h4 class="footer-title">NUESTRAS LOTERÍAS</h4>
+        <ul class="footer-list">
+          <li><a href="#">Cupón Extra de Navidad</a></li>
+          <li><a href="#">11/11 de la ONCE</a></li>
+          <li><a href="#">Eurojackpot</a></li>
+          <li><a href="#">Super 11</a></li>
+          <li><a href="#">Mi Día</a></li>
+          <li><a href="#">Triplex de la ONCE</a></li>
+          <li><a href="#">Sueldoz Fin de Semana</a></li>
+          <li><a href="#">Cupón Diario</a></li>
+          <li><a href="#">Cuponazo</a></li>
+          <li><a href="#">Loterías</a></li>
+        </ul>
+
+        <h5 class="footer-subtitle">NUESTROS RASCAS</h5>
+        <ul class="footer-list">
+          <li><a href="#">7 de la Suerte</a></li>
+          <li><a href="#">Monopoly</a></li>
+          <li><a href="#">Súper Colores Halloween</a></li>
+          <li><a href="#">Ver más rasca</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 2 -->
+      <div class="footer-col">
+        <h4 class="footer-title">RESULTADOS</h4>
+        <ul class="footer-list">
+          <li><a href="#">Últimos resultados</a></li>
+          <li><a href="#">Resultados de Cupones</a></li>
+          <li><a href="#">Eurojackpot</a></li>
+          <li><a href="#">Mi Día</a></li>
+          <li><a href="#">Super 11</a></li>
+          <li><a href="#">Triplex de la ONCE</a></li>
+          <li><a href="#">Extra de Navidad</a></li>
+          <li><a href="#">11/11 de la ONCE</a></li>
+          <li><a href="#">Comprobador de resultados</a></li>
+          <li><a href="#">Estadísticas</a></li>
+        </ul>
+
+        <h5 class="footer-subtitle">APPS / COMPLEMENTOS</h5>
+        <ul class="footer-list">
+          <li><a href="#">Mi Vendedor ONCE</a></li>
+          <li><a href="#">JuegosONCE: Sorteos de la ONCE</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3 -->
+      <div class="footer-col">
+        <h4 class="footer-title">JUEGO MÁS SEGURO</h4>
+        <ul class="footer-list">
+          <li><a href="#">Juego más seguro</a></li>
+          <li><a href="#">Autocontrol</a></li>
+          <li><a href="#">Prohibición menores de edad</a></li>
+          <li><a href="#">Resumen protocolo de conductas</a></li>
+        </ul>
+
+        <h4 class="footer-title">SOBRE JUEGOSONCE</h4>
+        <ul class="footer-list">
+          <li><a href="#">¿Quiénes somos?</a></li>
+          <li><a href="#">Grupo Social ONCE</a></li>
+          <li><a href="#">Accesibilidad</a></li>
+          <li><a href="#">Quejas y sugerencias</a></li>
+          <li><a href="#">Preguntas frecuentes</a></li>
+          <li><a href="#">Información legal</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 4 -->
+      <div class="footer-col footer-col--right">
+        <h4 class="footer-title">ATENCIÓN AL CLIENTE</h4>
+        <p class="footer-phone">91 125 34 12</p>
+        <a class="footer-mail" href="mailto:sacjente@juegosonce.es">sacjente@juegosonce.es</a>
+
+        <a class="btn btn--cta" href="#">Regístrate y empieza a jugar</a>
+
+        <div class="footer-social">
+          <a aria-label="Facebook" href="#"><svg viewBox="0 0 24 24"><path d="M13 22v-8h3l1-4h-4V7c0-1.1.9-2 2-2h2V1h-3a5 5 0 0 0-5 5v3H6v4h3v8h4Z"/></svg></a>
+          <a aria-label="Instagram" href="#"><svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm5 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm6-1.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Z"/><circle cx="12" cy="12" r="3.5"/></svg></a>
+          <a aria-label="X / Twitter" href="#"><svg viewBox="0 0 24 24"><path d="M3 3h4l5 7 5-7h4l-8 10 8 8h-4l-6-7-6 7H3l8-10L3 3Z"/></svg></a>
+          <a aria-label="YouTube" href="#"><svg viewBox="0 0 24 24"><path d="M23 8.5v7a3.5 3.5 0 0 1-3.5 3.5h-15A3.5 3.5 0 0 1 1 15.5v-7A3.5 3.5 0 0 1 4.5 5h15A3.5 3.5 0 0 1 23 8.5ZM10 9v6l6-3-6-3Z"/></svg></a>
+        </div>
+
+        <div class="footer-badges">
+          <img src="images/Juego_Responsable.png" alt="Juego responsable +18" />
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom__row">
+        <p>© 2025 [Enrique Páez].  
+          Esta obra está bajo una  
+          <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">
+          Licencia Creative Commons Atribución 4.0 Internacional</a>.
+        </p>
+        <ul class="footer-legal">
+          <li><a href="#">Aviso legal</a></li>
+          <li><a href="#">Política de cookies</a></li>
+          <li><a href="#">Privacidad</a></li>
+          <li><a href="#">Condiciones de uso</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS opcional muy simple para actualizar precio por nº de sorteos -->
+  <script>
+    const PRICE_PER_DRAW = 1; // cambia a 2, 2.5, etc. según el juego
+
+    const drawCountSpan = document.getElementById('draw-count');
+    const totalPriceSpan = document.getElementById('total-price');
+    const [btnMinus, btnPlus] = document.querySelectorAll('.draws__controls button');
+
+    let draws = 1;
+
+    function render() {
+      drawCountSpan.textContent = draws + (draws === 1 ? ' sorteo' : ' sorteos');
+      const total = (draws * PRICE_PER_DRAW).toFixed(2);
+      totalPriceSpan.textContent = total + ' $';
+    }
+
+    btnMinus.addEventListener('click', () => {
+      if (draws > 1) {
+        draws--;
+        render();
+      }
+    });
+
+    btnPlus.addEventListener('click', () => {
+      draws++;
+      render();
+    });
+
+    render();
+  </script>
+</body>
+</html>
