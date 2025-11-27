@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: $font-main;
+  color: $ink;
+  background: $paper;
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Utilidades */
+.container { max-width: 1100px; margin-inline: auto; padding: 0 16px; }
+.muted     { color: $muted; }
+.full      { width: 100%; }
+.small     { font-size: .9rem; }
+
+/* Botones genéricos */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: .95rem;
+}
+
+/* Rojo principal */
+.btn--primary {
+  background: $accent;
+  color: #111;
+  border-color: #00000022;
+
+  &:hover { filter: brightness(.95); }
+}
+
+/* Blanco (ghost) */
+.btn--ghost {
+  background: #fff;
+  color: #111;
+  border-color: #00000022;
+
+  &:hover { background: #f8f8f8; }
+}
+
+/* Botón PayPal "genérico" (luego lo usamos en carrito también) */
+.btn--paypal {
+  background: #ffc439;
+  color: #111;
+  border-color: #00000022;
+}
+
+/* Inputs */
+.input,
+.select {
+  padding: 10px 12px;
+  border: 1px solid $border;
+  border-radius: 10px;
+  min-width: 180px;
+}
+
+/* Layout base de la página (cada vista lo puede sobreescribir) */
+.page-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: $paper;
+}

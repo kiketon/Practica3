@@ -1,0 +1,22 @@
+// === Paleta principal LA DOCE ===
+$brand:        #d32f2f;  // rojo header / tarjetas
+$brand-dark:   #b12222;
+$accent:       #ff3939;  // botones principales (comprar, pagar…)
+$accent-soft:  #f31212;  // acento suave (catálogo / index)
+$paper:        #ffffff;  // fondo de página
+$bg-soft:      #f1f1f1;  // gris muy claro
+$ink:          #333333;  // texto principal
+$muted:        #777777;  // texto secundario
+$surface:      #ffffff;  // tarjetas blancas (resumen, etc.)
+$border:       #e5e7eb;
+$highlight:    #ff3939;
+$radius:       14px;
+
+// Tipografía
+$font-main: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial,
+            "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+
+// Breakpoints
+$bp-md: 960px;
+$bp-sm: 560px;
+

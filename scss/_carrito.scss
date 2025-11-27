@@ -1,0 +1,130 @@
+.cart-page { padding: 32px 0; }
+
+.cart-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 22px;
+}
+
+/* Lista de productos */
+.cart-list { display: grid; gap: 14px; }
+
+.cart-item {
+  display: grid;
+  grid-template-columns: 90px 1fr auto auto;
+  gap: 14px;
+  align-items: center;
+  background: $brand;
+  border-radius: $radius;
+  padding: 12px;
+  color: #1a1919;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  border: none;
+}
+
+.thumb {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 70px;
+  border-radius: 10px;
+  background: #fff;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+  }
+}
+
+.cart-item__info {
+  h3 {
+    margin: 0 0 4px;
+    font-size: 16px;
+    color: #1d1c1c;
+  }
+
+  p {
+    margin: 0;
+    color: #201f1f;
+    font-size: .9rem;
+  }
+}
+
+.qty {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.subtotal {
+  font-weight: 700;
+  color: #fff;
+}
+
+.cart-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+/* Botones blancos en el carrito */
+.cart-item .btn,
+.cart-actions .btn,
+.btn--ghost {
+  background: #fff !important;
+  color: #111 !important;
+  border: 1px solid #00000022 !important;
+
+  &:hover { background: #f8f8f8 !important; }
+}
+
+/* Botón PayPal del resumen blanco/redondeado */
+.btn--paypal {
+  background: #fff !important;
+  color: #111 !important;
+  border: 1px solid #00000033 !important;
+  border-radius: 999px !important;
+
+  &:hover { background: #f5f5f5 !important; }
+}
+
+/* Resumen lateral */
+.summary {
+  background: $surface;
+  border: 1px solid $border;
+  border-radius: $radius;
+  padding: 16px;
+  position: sticky;
+  top: 88px;
+  height: fit-content;
+
+  h2 { margin: 0 0 12px; }
+}
+
+.summary__row {
+  display: flex;
+  justify-content: space-between;
+  margin: 6px 0;
+}
+
+.summary__total {
+  dt, dd { font-weight: 800; }
+}
+
+/* Responsivo carrito */
+@media (max-width: $bp-md) {
+  .cart-layout { grid-template-columns: 1fr; }
+}
+
+@media (max-width: $bp-sm) {
+  .cart-item {
+    grid-template-columns: 70px 1fr;
+    grid-template-areas:
+      "thumb info"
+      "qty subtotal";
+  }
+
+  .cart-item .thumb { grid-area: thumb; }
+}

@@ -1,0 +1,13 @@
+// 1. Variables y cosas globales
+@import 'variables';
+@import 'globals';
+
+// 2. Layout común
+@import 'header';
+@import 'footer';
+
+// 3. Páginas
+@import 'home';      // index
+@import 'catalogo';  // catálogo / productos
+@import 'productos'; // página de producto individual (si la usas)
+@import 'carrito';   // carrito

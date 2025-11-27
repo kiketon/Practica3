@@ -1,0 +1,205 @@
+.page-main--producto {
+  @extend .page-main;
+  background: #f8f8f8;
+  padding: 32px 0 40px;
+}
+
+.product-page__title {
+  margin: 0 0 18px;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.product-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 1.8fr;
+  gap: 24px;
+}
+
+/* Columna izquierda */
+.product-hero {
+  background: $surface;
+  border-radius: $radius;
+  box-shadow: 0 12px 30px rgba(0,0,0,.15);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-hero__image {
+  position: relative;
+  background: #000;
+
+  img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+  }
+}
+
+.product-hero__body {
+  padding: 20px 22px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.product-hero__title {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.product-hero__jackpot {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #fff;
+  background: $brand;
+  padding: 8px 14px;
+  border-radius: 999px;
+  display: inline-block;
+}
+
+.product-hero__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Columna derecha */
+.product-config {
+  background: $surface;
+  border-radius: $radius;
+  box-shadow: 0 12px 30px rgba(0,0,0,.12);
+  padding: 18px 22px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Tabs “Sencilla / Múltiple / Favoritas” */
+.product-tabs {
+  display: inline-flex;
+  padding: 4px;
+  border-radius: 999px;
+  background: #f3f4f6;
+
+  button {
+    border: none;
+    background: transparent;
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: .9rem;
+    cursor: pointer;
+    color: $muted;
+
+    &.is-active {
+      background: #fff;
+      color: $brand;
+      font-weight: 600;
+      box-shadow: 0 2px 6px rgba(0,0,0,.12);
+    }
+  }
+}
+
+/* Bloque combinación */
+.combo-card {
+  background: #f9fafb;
+  border-radius: $radius;
+  padding: 14px 16px 16px;
+  border: 1px solid #e5e7eb;
+}
+
+.combo-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.combo-title  { font-weight: 600; }
+.combo-actions {
+  display: flex;
+  gap: 8px;
+  font-size: .85rem;
+  color: $brand;
+  cursor: pointer;
+}
+
+/* Bolas de números */
+.number-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.ball {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid $brand;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .9rem;
+  font-weight: 600;
+  background: #fff;
+
+  &--highlight {
+    background: $brand;
+    color: #fff;
+  }
+}
+
+/* Sorteos (incrementar cantidad) */
+.draws {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.draws__controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  button {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 1px solid $border;
+    background: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 1;
+  }
+}
+
+/* Barra resumen inferior */
+.product-summary {
+  margin-top: auto;
+  border-top: 1px solid $border;
+  padding-top: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.product-summary__info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.product-summary__price {
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+
+.product-summary__actions {
+  display: flex;
+  gap: 10px;
+}
