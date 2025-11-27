@@ -491,3 +491,24 @@ img{max-width:100%;display:block}
 .premio-card__button:hover {
   background-color: var(--highlight); /* Color al pasar el ratón sobre el botón */
 }
+
+.btn-sintonia {
+    background: #fdfdfd;
+    color: rgb(22, 21, 21);
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: .3s;
+    font-weight: 600;
+}
+
+.btn-sintonia:hover {
+    background: #d32f2f;
+}
+
+/* Ocultar controles del audio */
+#audio-sintonia {
+    display: none;
+}
