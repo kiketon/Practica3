@@ -1,53 +1,76 @@
-/* Página de producto */
+/* ============================================================
+   Página de Producto - Estilo tipo LA DOCE
+   Compatibilidad full Bootstrap 5
+   ============================================================ */
+
+/* ===== VARIABLES (ajusta según tu proyecto) ===== */
+$brand: #e53935;         // Rojo principal
+$surface: #ffffff;       // Blanco tarjeta
+$radius: 14px;
+$border: #d1d5db;
+$muted: #6b7280;
+
+
+/* ===== Fondo general de la página ===== */
 .page-main--producto {
-  @extend .page-main;
   background: #f3f4f6;
   padding: 32px 0 40px;
 }
 
-.product-page__title {
-  margin: 0 0 18px;
-  font-size: 1.6rem;
-  font-weight: 700;
-}
 
-/* Tarjeta grande tipo ONCE, que contiene las 2 columnas */
-.product-layout {
-  max-width: 980px;
+/* ===== TARJETA PRINCIPAL DEL PRODUCTO ===== */
+.product-shell {
+  max-width: 1040px;
   margin: 0 auto 40px;
   background: $surface;
   border-radius: 24px;
   box-shadow: 0 24px 45px rgba(0, 0, 0, 0.16);
-  overflow: hidden;          // para que el borde redondeado afecte a todo
-  padding: 0;                // el padding lo ponemos dentro de cada lado
+  padding: 24px 32px 32px;
 }
 
-/* Columna izquierda */
+/* Título superior */
+.product-page__title {
+  margin-bottom: 18px;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+/* Layout interno (usa cols de Bootstrap) */
+.product-layout {
+  row-gap: 24px;
+}
+
+
+/* ============================================================
+   COLUMNA IZQUIERDA
+   ============================================================ */
+
 .product-hero {
-  background: transparent;   // ya no es una tarjeta independiente
-  box-shadow: none;
   display: flex;
   flex-direction: column;
+  background: transparent !important;
+  box-shadow: none !important;
 }
 
 .product-hero__image img {
   width: 100%;
   height: 260px;
   object-fit: cover;
+  border-radius: 16px;
   display: block;
 }
 
 .product-hero__body {
-  padding: 20px 24px 24px;
+  padding-top: 18px;
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
 
 .product-hero__title {
-  margin: 0;
   font-size: 1.4rem;
   font-weight: 700;
+  margin: 0;
 }
 
 .product-hero__jackpot {
@@ -64,44 +87,56 @@
   display: flex;
   flex-direction: column;
   gap: 4px;
+  font-size: 0.9rem;
 }
 
-/* Columna derecha */
+
+/* ============================================================
+   COLUMNA DERECHA
+   ============================================================ */
+
 .product-config {
-  background: transparent;   // también sin tarjeta propia
-  box-shadow: none;
-  padding: 20px 24px 24px;
+  background: transparent !important;
+  padding: 0;
   display: flex;
   flex-direction: column;
   gap: 18px;
 }
 
-/* Tabs “Sencilla / Múltiple / Favoritas” */
+
+/* ============================================================
+   TABS DE COMBINACIÓN (Sencilla / Múltiple / Favoritas)
+   ============================================================ */
 .product-tabs {
   display: inline-flex;
   padding: 4px;
   border-radius: 999px;
   background: #f3f4f6;
+  gap: 4px;
 
   button {
     border: none;
     background: transparent;
     padding: 6px 14px;
     border-radius: 999px;
-    font-size: .9rem;
+    font-size: 0.9rem;
     cursor: pointer;
     color: $muted;
+    transition: .25s;
 
     &.is-active {
       background: #fff;
       color: $brand;
       font-weight: 600;
-      box-shadow: 0 2px 6px rgba(0,0,0,.12);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
     }
   }
 }
 
-/* Bloque combinación */
+
+/* ============================================================
+   TARJETA DE COMBINACIÓN (Números + Repetir/Limpiar)
+   ============================================================ */
 .combo-card {
   background: #f9fafb;
   border-radius: $radius;
@@ -116,17 +151,27 @@
   margin-bottom: 10px;
 }
 
-.combo-title  { font-weight: 600; }
+.combo-title {
+  font-weight: 600;
+  font-size: 1rem;
+}
 
 .combo-actions {
   display: flex;
   gap: 8px;
-  font-size: .85rem;
+  font-size: 0.85rem;
   color: $brand;
   cursor: pointer;
+
+  span {
+    cursor: pointer;
+  }
 }
 
-/* Bolas de números */
+
+/* ============================================================
+   BOLAS NUMÉRICAS
+   ============================================================ */
 .number-row {
   display: flex;
   flex-wrap: wrap;
@@ -141,9 +186,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: .9rem;
-  font-weight: 600;
   background: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
 
   &--highlight {
     background: $brand;
@@ -151,12 +196,15 @@
   }
 }
 
-/* Sorteos (incrementar cantidad) */
+
+/* ============================================================
+   CONTADOR DE SORTEOS
+   ============================================================ */
 .draws {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 4px;
+  margin-top: 6px;
 }
 
 .draws__controls {
@@ -173,10 +221,14 @@
     cursor: pointer;
     font-size: 18px;
     line-height: 1;
+    padding: 0;
   }
 }
 
-/* Barra resumen inferior */
+
+/* ============================================================
+   RESUMEN FINAL (precio + botones)
+   ============================================================ */
 .product-summary {
   margin-top: auto;
   border-top: 1px solid $border;

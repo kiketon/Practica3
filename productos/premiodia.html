@@ -36,13 +36,15 @@
     </div>
   </header>
 
-  <main class="page-main">
+  <main class="page-main page-main--producto">
     <section class="container">
-      <h1 class="product-page__title">Jugar al premio del dia</h1>
 
-      <div class="product-layout">
+      <div class="product-shell">
+      <h1 class="product-page__title mb-4">Jugar al premio del dia</h1>
+
+      <div class="row align-items-start product-layout">
         <!-- COLUMNA IZQUIERDA: HERO DEL JUEGO -->
-        <aside class="product-hero">
+        <aside class="col-12 col-lg-18 product-hero">
           <div class="product-hero__image">
             <!-- Cambia la imagen por la del producto -->
             <img src="/images/Pdia.png" alt="Cupón Diario">
@@ -66,30 +68,30 @@
           </div>
         </aside>
 
-        <!-- COLUMNA DERECHA: CONFIGURAR APUESTA -->
-        <section class="product-config">
-          <!-- Tabs modo de juego (sólo visual, sin JS obligatorio) -->
-          <div class="product-tabs" aria-label="Tipo de combinación">
+        <section class="col-16 col-lg-10 product-config">
+
+          <!-- Tabs -->
+          <div class="product-tabs mb-3" aria-label="Tipo de combinación">
             <button class="is-active" type="button">Sencilla</button>
             <button type="button">Múltiple</button>
             <button type="button">Favoritas</button>
           </div>
 
-          <!-- Combinación 1 -->
-          <article class="combo-card">
+          <!-- Combinación -->
+          <article class="combo-card mb-3">
             <header class="combo-card__header">
               <div>
                 <span class="combo-title">Combinación 1</span>
                 <span class="muted"> • Automática</span>
               </div>
+
               <div class="combo-actions">
                 <span>Repetir</span>
                 <span>Limpiar</span>
               </div>
             </header>
 
-            <!-- Números de ejemplo, sólo visual -->
-            <div class="number-row">
+            <div class="number-row mb-3">
               <span class="ball">04</span>
               <span class="ball">12</span>
               <span class="ball">23</span>
@@ -98,11 +100,9 @@
               <span class="ball ball--highlight">S</span>
             </div>
 
-            <!-- Cuántos sorteos jugar -->
             <div class="draws">
-              <div>
-                <strong>¿Cuántos sorteos quieres jugar?</strong>
-              </div>
+              <div><strong>¿Cuántos sorteos quieres jugar?</strong></div>
+
               <div class="draws__controls">
                 <button type="button" aria-label="Menos sorteos">−</button>
                 <span id="draw-count">1 sorteo</span>
@@ -127,6 +127,7 @@
             </div>
           </footer>
         </section>
+      </div>
       </div>
     </section>
   </main>

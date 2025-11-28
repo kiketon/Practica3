@@ -36,14 +36,16 @@
 
   <!-- MAIN con clase modificada para usar el fondo de producto -->
   <main class="page-main page-main--producto">
-    <section class="container">
+  <section class="container">
+
+    <div class="product-shell">
       <h1 class="product-page__title mb-4">Jugar a Cupón Diario</h1>
 
-      <!-- Bootstrap ROW -->
-      <div class="row g-0 align-items-start product-layout">
+      <!-- Bootstrap ROW corregida -->
+      <div class="row align-items-start product-layout">
 
-        <!-- COLUMNA IZQUIERDA -->
-        <aside class="col-12 col-lg-5 product-hero">
+        <!-- IZQUIERDA -->
+        <aside class="col-12 col-lg-18 product-hero">
           <div class="product-hero__image">
             <img src="../images/CDiario.png" alt="Cupón Diario">
           </div>
@@ -66,8 +68,9 @@
           </div>
         </aside>
 
-        <!-- COLUMNA DERECHA -->
-        <section class="col-12 col-lg-7 product-config">
+        <!-- DERECHA -->
+        <section class="col-16 col-lg-10 product-config">
+
           <!-- Tabs -->
           <div class="product-tabs mb-3" aria-label="Tipo de combinación">
             <button class="is-active" type="button">Sencilla</button>
@@ -75,13 +78,14 @@
             <button type="button">Favoritas</button>
           </div>
 
-          <!-- Combinación 1 -->
+          <!-- Combinación -->
           <article class="combo-card mb-3">
             <header class="combo-card__header">
               <div>
                 <span class="combo-title">Combinación 1</span>
                 <span class="muted"> • Automática</span>
               </div>
+
               <div class="combo-actions">
                 <span>Repetir</span>
                 <span>Limpiar</span>
@@ -99,6 +103,7 @@
 
             <div class="draws">
               <div><strong>¿Cuántos sorteos quieres jugar?</strong></div>
+
               <div class="draws__controls">
                 <button type="button" aria-label="Menos sorteos">−</button>
                 <span id="draw-count">1 sorteo</span>
@@ -107,26 +112,33 @@
             </div>
           </article>
 
-          <!-- Resumen inferior -->
+          <!-- Resumen -->
           <footer class="product-summary">
             <div class="product-summary__info">
               <span class="muted">Cupón Diario</span>
               <span class="muted">Precio por apuesta: 1,00 $</span>
             </div>
+
             <div class="product-summary__info">
               <span class="muted">Total a pagar</span>
               <span class="product-summary__price" id="total-price">1,00 $</span>
             </div>
+
             <div class="product-summary__actions">
-              <a href="../catalogo.html" class="btn btn--ghost">Volver al catálogo</a>
-              <a href="../carrito.html" class="btn btn--primary">Añadir al carrito</a>
+              <a href="../catalogo.html" class="btn btn-outline-secondary">Volver al catálogo</a>
+              <a href="../carrito.html" class="btn btn-danger">Añadir al carrito</a>
             </div>
           </footer>
+
         </section>
 
       </div>
-    </section>
-  </main>
+    </div>
+
+  </section>
+</main>
+
+
 
   <!-- Footer -->
   <footer class="site-footer site-footer--dark">
