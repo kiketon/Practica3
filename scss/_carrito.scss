@@ -1,4 +1,10 @@
-.cart-page { padding: 32px 0; }
+/* ============================
+   CARRITO
+============================ */
+
+.cart-page {
+  padding: 32px 0;
+}
 
 .cart-layout {
   display: grid;
@@ -7,14 +13,17 @@
 }
 
 /* Lista de productos */
-.cart-list { display: grid; gap: 14px; }
+.cart-list {
+  display: grid;
+  gap: 14px;
+}
 
 .cart-item {
   display: grid;
   grid-template-columns: 90px 1fr auto auto;
   gap: 14px;
   align-items: center;
-  background: $brand;
+  background: $brand;          // rojo global
   border-radius: $radius;
   padding: 12px;
   color: #1a1919;
@@ -77,17 +86,21 @@
   color: #111 !important;
   border: 1px solid #00000022 !important;
 
-  &:hover { background: #f8f8f8 !important; }
+  &:hover {
+    background: #f8f8f8 !important;
+  }
 }
 
-/* Botón PayPal del resumen blanco/redondeado */
+/* Botón PayPal del resumen */
 .btn--paypal {
   background: #fff !important;
   color: #111 !important;
   border: 1px solid #00000033 !important;
   border-radius: 999px !important;
 
-  &:hover { background: #f5f5f5 !important; }
+  &:hover {
+    background: #f5f5f5 !important;
+  }
 }
 
 /* Resumen lateral */
@@ -100,7 +113,9 @@
   top: 88px;
   height: fit-content;
 
-  h2 { margin: 0 0 12px; }
+  h2 {
+    margin: 0 0 12px;
+  }
 }
 
 .summary__row {
@@ -110,12 +125,17 @@
 }
 
 .summary__total {
-  dt, dd { font-weight: 800; }
+  dt,
+  dd {
+    font-weight: 800;
+  }
 }
 
-/* Responsivo carrito */
+/* ===== Responsivo carrito ===== */
 @media (max-width: $bp-md) {
-  .cart-layout { grid-template-columns: 1fr; }
+  .cart-layout {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: $bp-sm) {
@@ -126,5 +146,7 @@
       "qty subtotal";
   }
 
-  .cart-item .thumb { grid-area: thumb; }
+  .cart-item .thumb {
+    grid-area: thumb;
+  }
 }

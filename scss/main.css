@@ -168,6 +168,9 @@ img {
   height: 26px;
 }
 
+/* ============================
+   FOOTER GLOBAL
+============================ */
 .site-footer--dark {
   background: #212529;
   color: #d9dde1;
@@ -182,13 +185,13 @@ img {
   text-decoration: underline;
 }
 
+/* ===== Columnas ===== */
 .footer-cols {
   display: grid;
   gap: 2rem;
   padding: 3rem 0;
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
-
 @media (max-width: 992px) {
   .footer-cols {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -199,6 +202,8 @@ img {
     grid-template-columns: 1fr;
   }
 }
+
+/* ===== Títulos ===== */
 .footer-title {
   color: #fff;
   font-size: 1rem;
@@ -213,6 +218,7 @@ img {
   opacity: 0.85;
 }
 
+/* ===== Listas ===== */
 .footer-list {
   list-style: none;
   padding: 0;
@@ -228,6 +234,7 @@ img {
   opacity: 1;
 }
 
+/* ===== Columna derecha ===== */
 .footer-col--right {
   display: flex;
   flex-direction: column;
@@ -245,9 +252,10 @@ img {
   opacity: 0.9;
 }
 
+/* ===== Botón CTA ===== */
 .btn--cta {
   display: inline-block;
-  background: #ff0000;
+  background: #ff3939;
   color: #222;
   padding: 0.7rem 1rem;
   border-radius: 8px;
@@ -259,6 +267,7 @@ img {
   text-decoration: none;
 }
 
+/* ===== Redes sociales ===== */
 .footer-social {
   display: flex;
   gap: 0.6rem;
@@ -273,6 +282,7 @@ img {
   fill: #fff;
 }
 
+/* ===== Sellos & Store badges ===== */
 .footer-badges {
   display: flex;
   gap: 0.75rem;
@@ -292,6 +302,7 @@ img {
   height: 34px;
 }
 
+/* ===== Parte inferior ===== */
 .footer-bottom {
   background: #181a1d;
 }
@@ -304,6 +315,7 @@ img {
   padding: 1rem 0;
 }
 
+/* ===== Legal ===== */
 .footer-legal {
   display: flex;
   gap: 1rem;
@@ -1028,6 +1040,9 @@ img {
   gap: 10px;
 }
 
+/* ============================
+   CARRITO
+============================ */
 .cart-page {
   padding: 32px 0;
 }
@@ -1115,7 +1130,7 @@ img {
   background: #f8f8f8 !important;
 }
 
-/* Botón PayPal del resumen blanco/redondeado */
+/* Botón PayPal del resumen */
 .btn--paypal {
   background: #fff !important;
   color: #111 !important;
@@ -1147,11 +1162,12 @@ img {
   margin: 6px 0;
 }
 
-.summary__total dt, .summary__total dd {
+.summary__total dt,
+.summary__total dd {
   font-weight: 800;
 }
 
-/* Responsivo carrito */
+/* ===== Responsivo carrito ===== */
 @media (max-width: 960px) {
   .cart-layout {
     grid-template-columns: 1fr;
