@@ -306,18 +306,17 @@
   }
 }
 
+/* IMPORTANTE: ahora .premios__container es un .row de Bootstrap */
 .premios__container {
-  display: flex;
-  justify-content: space-around;
-  gap: 20px;
-  flex-wrap: wrap;
+  margin-top: 1.5rem;   // un poco de separación con el texto
 }
 
+/* Cada premio va dentro de una col-** de Bootstrap, estilo de la tarjeta: */
 .premio-card {
   background: $surface;
   border-radius: 15px;
   padding: 20px;
-  width: 250px;
+  width: 100%;              // que llene la columna Bootstrap
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -328,13 +327,18 @@
     object-fit: cover;
     border-radius: 10px;
   }
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.16);
+  }
 }
 
 .premio-card__title {
   font-size: 1.5rem;
   font-weight: bold;
   margin: 15px 0;
-  color: $highlight; // antes $accent-soft
+  color: $highlight;
 }
 
 .premio-card__amount {
@@ -350,7 +354,7 @@
 }
 
 .premio-card__button {
-  background-color: $accent; // antes $accent-soft
+  background-color: $accent;
   color: #000;
   padding: 10px 20px;
   border-radius: 30px;
