@@ -1,22 +1,64 @@
-// === Paleta principal LA DOCE ===
-$brand:        #d32f2f;  // rojo header / tarjetas
+/// =====================================
+// 🎨 Paleta principal LA DOCE + Bootstrap
+// =====================================
+
+// Colores marca
+$brand:        #d32f2f;   // rojo header / tarjetas
 $brand-dark:   #b12222;
-$accent:       #ff3939;  // botones principales (comprar, pagar…)
-$accent-soft:  #f31212;  // acento suave (catálogo / index)
-$paper:        #ffffff;  // fondo de página
-$bg-soft:      #f1f1f1;  // gris muy claro
-$ink:          #333333;  // texto principal
-$muted:        #777777;  // texto secundario
-$surface:      #ffffff;  // tarjetas blancas (resumen, etc.)
+$accent:       #ff3939;   // botones principales
+$accent-soft:  #f31212;
+$paper:        #ffffff;
+$bg-soft:      #f1f1f1;
+$ink:          #333333;
+$muted:        #777777;
+$surface:      #ffffff;
 $border:       #e5e7eb;
 $highlight:    #ff3939;
 $radius:       14px;
 
-// Tipografía
-$font-main: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial,
-            "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+// =====================================
+// 🟦 Bootstrap overrides
+// Estas sí afectan directamente a Bootstrap
+// =====================================
 
-// Breakpoints
+// Color base de Bootstrap
+$primary:   $brand;
+$secondary: $accent;
+$success:   #28a745;
+$danger:    #dc3545;
+$info:      #17a2b8;
+$warning:   #ffc107;
+$light:     #f8f9fa;
+$dark:      #343a40;
+
+// Tipografía de Bootstrap
+$font-family-base: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial,
+                   "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+
+// Bordes redondeados Bootstrap usando tu diseño
+$border-radius:            $radius;
+$border-radius-sm:         $radius * 0.7;
+$border-radius-lg:         $radius * 1.3;
+
+// Background / texto general
+$body-bg:    $paper;
+$body-color: $ink;
+
+// Inputs / botones
+$input-border-color: $border;
+$btn-border-radius: $radius;
+
+// =====================================
+// 📱 Breakpoints
+// =====================================
 $bp-md: 960px;
 $bp-sm: 560px;
 
+// Sobrescribir los breakpoints nativos de Bootstrap
+$grid-breakpoints: (
+  xs: 0,
+  sm: $bp-sm,
+  md: $bp-md,
+  lg: 1140px,
+  xl: 1320px
+);

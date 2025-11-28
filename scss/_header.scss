@@ -1,54 +1,81 @@
 .site-header {
-  --h: 64px;
-  background: $brand;
-  color: #fff;
+  background-color: $brand;
+  border-bottom: 4px solid $brand-dark;
   position: sticky;
   top: 0;
-  z-index: 10;
-  margin: 0;
-  padding: 0;
-  border-bottom: 4px solid $brand-dark;
+  z-index: 1020; // por encima de componentes Bootstrap
+
+  .navbar {
+    padding-block: .4rem;
+    background-color: transparent; // el fondo ya lo da .site-header
+  }
+
+  .navbar-brand {
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: .5px;
+    color: #fff;
+
+    img {
+      height: 28px;
+      display: block;
+    }
+
+    span { color: #fff; }
+  }
+
+  .navbar-toggler {
+    border-color: rgba(255,255,255,.4);
+
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255,255,255,0.9%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+  }
+
+  .nav-link {
+    color: #fff;
+    border-radius: 999px;
+    padding-inline: .8rem;
+    transition: background-color .2s ease, color .2s ease;
+
+    &:hover,
+    &.active {
+      background-color: rgba(255,255,255,.25);
+      color: #fff;
+    }
+  }
+
+  // pastilla blanca tipo ONCE
+  .nav-link-pill {
+    background-color: #fff;
+    color: #222;
+
+    &:hover,
+    &.active {
+      background-color: #f4f4f4;
+      color: #222;
+    }
+  }
+
+  .btn-cart {
+    background-color: transparent;
+    border: 1px solid rgba(255,255,255,.35);
+    color: #fff;
+    padding: .25rem .7rem;
+
+    svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    &:hover {
+      background-color: rgba(255,255,255,.18);
+    }
+  }
+
+  @media (max-width: $bp-sm) {
+    .navbar-brand span {
+      font-size: .95rem;
+    }
+  }
 }
-
-.header__row {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  min-height: var(--h);
-}
-
-.logo img { height: 28px; display: block; }
-
-.brand {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 20px;
-  letter-spacing: .5px;
-}
-
-.nav {
-  display: flex;
-  gap: 10px;
-  margin-left: auto;
-}
-
-.nav__link {
-  color: #fff;
-  text-decoration: none;
-  background: #ffffff33;
-  padding: 6px 10px;
-  border-radius: 999px;
-  transition: .2s;
-
-  &:hover { background: #ffffff55; }
-}
-
-.nav__link--pill { background: #fff; color: #222; }
-
-.cart {
-  color: #fff;
-  display: inline-flex;
-}
-
-.icon { width: 26px; height: 26px; }

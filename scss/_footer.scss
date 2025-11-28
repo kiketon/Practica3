@@ -20,18 +20,11 @@
 
 /* ===== Columnas ===== */
 .footer-cols {
-  display: grid;
-  gap: 2rem;
-  padding: 3rem 0;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  padding: 3rem 0;  // el layout lo hace Bootstrap (.row / .col)
+}
 
-  @media (max-width: 992px) {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  @media (max-width: 600px) {
-    grid-template-columns: 1fr;
-  }
+.footer-col {
+  // aquí podrías meter cosas específicas de cada columna si quieres
 }
 
 /* ===== Títulos ===== */
@@ -147,11 +140,18 @@
 }
 
 .footer-bottom__row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   gap: 1rem;
   padding: 1rem 0;
+
+  // ayuda extra para móvil
+  @media (max-width: 576px) {
+    text-align: center;
+
+    .footer-legal {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
 }
 
 /* ===== Legal ===== */

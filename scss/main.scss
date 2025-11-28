@@ -1,13 +1,18 @@
-// 1. Variables y cosas globales
+// 1. Variables (sobrescriben Bootstrap)
 @import 'variables';
+
+// 2. Bootstrap (ya usa tus variables)
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// 3. Globales
 @import 'globals';
 
-// 2. Layout común
+// 4. Layout común
 @import 'header';
 @import 'footer';
 
-// 3. Páginas
-@import 'home';      // index
-@import 'catalogo';  // catálogo / productos
-@import 'productos'; // página de producto individual (si la usas)
-@import 'carrito';   // carrito
+// 5. Páginas
+@import 'home';
+@import 'catalogo';
+@import 'productos';
+@import 'carrito';
