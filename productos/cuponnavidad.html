@@ -6,35 +6,74 @@
   <title>Juegos LA DOCE – Cupón Navidad</title>
   <!-- CSS sólo productos -->
   <link rel="stylesheet" href="../scss/main.css">
-  <link rel="icon" href="logos.ico" type="image/x-icon">
+  <link rel="icon" href="../logos.ico" type="image/x-icon">
 </head>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
 
 <body>
-  <!-- HEADER igual al resto -->
+  <!-- ===== HEADER (TU MISMO HEADER) ===== -->
   <header class="site-header">
-    <div class="container header__row">
-      <a class="logo" href="index.html" aria-label="Ir al inicio">
-        <img src="/images/logos.png.png" alt="Juegos LA DOCE" />
+  <nav class="navbar navbar-expand-lg" style="background:#d32f2f;">
+    <div class="container header__row d-flex justify-content-between align-items-center">
+
+      <!-- LOGO -->
+      <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html">
+        <img src="../images/logos.png.png" alt="Juegos LA DOCE" height="28">
+        <span>Juegos <strong>LA DOCE</strong></span>
       </a>
-      <a class="brand" href="/index.html">Juegos <strong>LA DOCE</strong></a>
 
-      <nav class="nav">
-        <a class="nav__link" href="/index.html">Inicio</a>
-        <a class="nav__link nav__link--pill" href="/catalogo.html">Productos</a>
-      </nav>
+      <!-- BOTÓN HAMBURGUESA -->
+      <button class="navbar-toggler" type="button" 
+              data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-      <span class="cart" aria-hidden="true">
-        <svg viewBox="0 0 24 24" class="icon">
-          <path d="M7 18a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm10 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM3 3h2l2.6 10.39A3 3 0 0 0 10.5 16h7.88a3 3 0 0 0 2.92-2.35L23 6H6"
-                fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </span>
+      <!-- MENÚ -->
+      <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+
+        <!-- LINKS DEL MENÚ -->
+        <ul class="navbar-nav d-flex align-items-center gap-3">
+
+          <li class="nav-item">
+            <a class="nav-link nav__link" href="../index.html">Inicio</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link nav__link" href="../catalogo.html">Productos</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link nav__link" href="./novedad.html">¡¡Novedad!!</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link nav__link" href="../login.html">Login</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link nav__link " href="../registro.html">Registrarse</a>
+          </li>
+
+          <!-- ICONO CARRITO -->
+          <li class="nav-item">
+            <a class="cart" href="../carrito.html" aria-label="Carrito">
+              <svg viewBox="0 0 24 24" class="icon" aria-hidden="true">
+                <path d="M7 18a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm10 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM3 3h2l2.6 10.39A3 3 0 0 0 10.5 16h7.88a3 3 0 0 0 2.92-2.35L23 6H6"
+                      fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
     </div>
-  </header>
+  </nav>
+</header>
 
   <main class="page-main page-main--producto">
     <section class="container">

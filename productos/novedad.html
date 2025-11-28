@@ -3,14 +3,18 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Juegos LA DOCE – Cupón Diario</title>
+  <title>Novedad – Juegos LA DOCE</title>
 
-  <!-- Tu CSS compilado (incluye Bootstrap desde main.scss) -->
+  <!-- Tu CSS -->
   <link rel="stylesheet" href="../scss/main.css">
   <link rel="icon" href="../logos.ico" type="image/x-icon">
 </head>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 
 <body>
+
   <!-- ===== HEADER (TU MISMO HEADER) ===== -->
   <header class="site-header">
   <nav class="navbar navbar-expand-lg" style="background:#d32f2f;">
@@ -43,7 +47,7 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link nav__link" href="./novedad.html">¡¡Novedad!!</a>
+            <a class="nav-link nav__link nav__link--pill" href="./novedad.html">¡¡Novedad!!</a>
           </li>
 
           <li class="nav-item">
@@ -73,113 +77,63 @@
   </nav>
 </header>
 
-  <!-- MAIN con clase modificada para usar el fondo de producto -->
+  <!-- ======================================
+       CONTENIDO PRINCIPAL
+       ====================================== -->
   <main class="page-main page-main--producto">
-  <section class="container">
+    <section class="container">
 
-    <div class="product-shell">
-      <h1 class="product-page__title mb-4">Jugar a Cupón Diario</h1>
+      <div class="product-shell" style="max-width: 900px; margin-inline: auto;">
+        
+        <h1 class="product-page__title text-center mb-4">✨ Nuevo Producto Disponible</h1>
 
-      <!-- Bootstrap ROW corregida -->
-      <div class="row align-items-start product-layout">
+        <div class="row g-4 align-items-center">
 
-        <!-- IZQUIERDA -->
-        <aside class="col-12 col-lg-18 product-hero">
-          <div class="product-hero__image">
-            <img src="../images/CDiario.png" alt="Cupón Diario">
+          <!-- IMAGEN DEL PRODUCTO -->
+          <div class="col-12 col-md-5">
+            <img src="../images/novedad.png" class="img-fluid rounded shadow-sm"
+                 alt="Cupón Verde Edición Especial">
           </div>
 
-          <div class="product-hero__body">
-            <span class="chip">Próximo sorteo: Jueves, 28 de noviembre</span>
+          <!-- INFO -->
+          <div class="col-12 col-md-7">
+            <h2 class="mb-3" style="font-weight: 700;">Cupón Verde – Edición Especial</h2>
 
-            <h2 class="product-hero__title">Bote del día</h2>
-            <span class="product-hero__jackpot">500.000 €</span>
+            <p class="muted mb-2">
+              Llega el nuevo <strong>Cupón Verde</strong>, una edición especial inspirada en el
+              cuidado del medio ambiente. ¡Participa con 5 cifras y gana premios increíbles!
+            </p>
 
-            <div class="product-hero__meta">
-              <p class="muted">
-                Juega al clásico Cupón Diario de LA DOCE por sólo 1,00 $ y
-                participa en el sorteo con 5 cifras y serie.
-              </p>
-              <p class="muted">
-                Elige tu combinación y decide cuántos sorteos quieres jugar.
-              </p>
+            <p class="muted mb-3">
+              Sorteo disponible todos los **viernes**. Precio por apuesta: <strong>2,00 €</strong>
+            </p>
+
+            <!-- PRECIO + BOTONES -->
+            <div class="d-flex flex-wrap align-items-center gap-3 mt-3">
+
+              <div class="product-summary__price" style="font-size: 1.8rem; font-weight: 800;">
+                2,00 €
+              </div>
+
+              <a href="../carrito.html" class="btn btn--primary">
+                Añadir al carrito
+              </a>
+
+              <a href="../catalogo.html" class="btn btn--ghost">
+                Ver catálogo
+              </a>
+
             </div>
+
           </div>
-        </aside>
-
-        <!-- DERECHA -->
-        <section class="col-16 col-lg-10 product-config">
-
-          <!-- Tabs -->
-          <div class="product-tabs mb-3" aria-label="Tipo de combinación">
-            <button class="is-active" type="button">Sencilla</button>
-            <button type="button">Múltiple</button>
-            <button type="button">Favoritas</button>
-          </div>
-
-          <!-- Combinación -->
-          <article class="combo-card mb-3">
-            <header class="combo-card__header">
-              <div>
-                <span class="combo-title">Combinación 1</span>
-                <span class="muted"> • Automática</span>
-              </div>
-
-              <div class="combo-actions">
-                <span>Repetir</span>
-                <span>Limpiar</span>
-              </div>
-            </header>
-
-            <div class="number-row mb-3">
-              <span class="ball">04</span>
-              <span class="ball">12</span>
-              <span class="ball">23</span>
-              <span class="ball">37</span>
-              <span class="ball">89</span>
-              <span class="ball ball--highlight">S</span>
-            </div>
-
-            <div class="draws">
-              <div><strong>¿Cuántos sorteos quieres jugar?</strong></div>
-
-              <div class="draws__controls">
-                <button type="button" aria-label="Menos sorteos">−</button>
-                <span id="draw-count">1 sorteo</span>
-                <button type="button" aria-label="Más sorteos">+</button>
-              </div>
-            </div>
-          </article>
-
-          <!-- Resumen -->
-          <footer class="product-summary">
-            <div class="product-summary__info">
-              <span class="muted">Cupón Diario</span>
-              <span class="muted">Precio por apuesta: 1,00 $</span>
-            </div>
-
-            <div class="product-summary__info">
-              <span class="muted">Total a pagar</span>
-              <span class="product-summary__price" id="total-price">1,00 $</span>
-            </div>
-
-            <div class="product-summary__actions">
-              <a href="../catalogo.html" class="btn btn-outline-secondary">Volver al catálogo</a>
-              <a href="../carrito.html" class="btn btn-danger">Añadir al carrito</a>
-            </div>
-          </footer>
-
-        </section>
+        </div>
 
       </div>
-    </div>
 
-  </section>
-</main>
+    </section>
+  </main>
 
-
-
-  <!-- Footer -->
+  <!-- Footer (igual que ya tienes) -->
   <footer class="site-footer site-footer--dark">
     <div class="container footer-cols">
       <!-- Col 1 -->
@@ -267,7 +221,7 @@
         </div>
 
         <div class="footer-badges">
-          <img src="../images/Juego_Responsable.png" alt="Juego responsable +18" />
+          <img src="images/Juego_Responsable.png" alt="Juego responsable +18" />
         </div>
       </div>
     </div>
@@ -289,40 +243,6 @@
     </div>
   </footer>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-          integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-          crossorigin="anonymous"></script>
-
-  <!-- JS para actualizar precio por nº de sorteos -->
-  <script>
-    const PRICE_PER_DRAW = 1; // cambia a 2, 2.5, etc. según el juego
-
-    const drawCountSpan = document.getElementById('draw-count');
-    const totalPriceSpan = document.getElementById('total-price');
-    const [btnMinus, btnPlus] = document.querySelectorAll('.draws__controls button');
-
-    let draws = 1;
-
-    function render() {
-      drawCountSpan.textContent = draws + (draws === 1 ? ' sorteo' : ' sorteos');
-      const total = (draws * PRICE_PER_DRAW).toFixed(2);
-      totalPriceSpan.textContent = total + ' $';
-    }
-
-    btnMinus.addEventListener('click', () => {
-      if (draws > 1) {
-        draws--;
-        render();
-      }
-    });
-
-    btnPlus.addEventListener('click', () => {
-      draws++;
-      render();
-    });
-
-    render();
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
