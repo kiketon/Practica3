@@ -4,48 +4,48 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Juegos LA DOCE – Cupón Diario</title>
-  <!-- CSS sólo productos -->
+
+  <!-- Tu CSS compilado (incluye Bootstrap desde main.scss) -->
   <link rel="stylesheet" href="../scss/main.css">
-  <link rel="icon" href="logos.ico" type="image/x-icon">
+  <link rel="icon" href="../logos.ico" type="image/x-icon">
 </head>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
 
 <body>
-  <!-- HEADER igual al resto -->
+  <!-- HEADER igual al resto, pero con rutas relativas correctas -->
   <header class="site-header">
     <div class="container header__row">
-      <a class="logo" href="index.html" aria-label="Ir al inicio">
-        <img src="/images/logos.png.png" alt="Juegos LA DOCE" />
+      <a class="logo" href="../index.html" aria-label="Ir al inicio">
+        <img src="../images/logos.png.png" alt="Juegos LA DOCE" />
       </a>
-      <a class="brand" href="/index.html">Juegos <strong>LA DOCE</strong></a>
+      <a class="brand" href="../index.html">Juegos <strong>LA DOCE</strong></a>
 
       <nav class="nav">
-        <a class="nav__link" href="/index.html">Inicio</a>
-        <a class="nav__link nav__link--pill" href="/catalogo.html">Productos</a>
+        <a class="nav__link" href="../index.html">Inicio</a>
+        <a class="nav__link nav__link--pill" href="../catalogo.html">Productos</a>
       </nav>
 
-      <span class="cart" aria-hidden="true">
+      <a class="cart" href="../carrito.html" aria-label="Carrito">
         <svg viewBox="0 0 24 24" class="icon">
           <path d="M7 18a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm10 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM3 3h2l2.6 10.39A3 3 0 0 0 10.5 16h7.88a3 3 0 0 0 2.92-2.35L23 6H6"
                 fill="none" stroke="currentColor" stroke-width="2"
                 stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
-      </span>
+      </a>
     </div>
   </header>
 
-  <main class="page-main">
+  <!-- MAIN con clase modificada para usar el fondo de producto -->
+  <main class="page-main page-main--producto">
     <section class="container">
-      <h1 class="product-page__title">Jugar a Cupón Diario</h1>
+      <h1 class="product-page__title mb-4">Jugar a Cupón Diario</h1>
 
-      <div class="product-layout">
-        <!-- COLUMNA IZQUIERDA: HERO DEL JUEGO -->
-        <aside class="product-hero">
+      <!-- Bootstrap ROW -->
+      <div class="row g-0 align-items-start product-layout">
+
+        <!-- COLUMNA IZQUIERDA -->
+        <aside class="col-12 col-lg-5 product-hero">
           <div class="product-hero__image">
-            <!-- Cambia la imagen por la del producto -->
-            <img src="/images/CDiario.png" alt="Cupón Diario">
+            <img src="../images/CDiario.png" alt="Cupón Diario">
           </div>
 
           <div class="product-hero__body">
@@ -66,17 +66,17 @@
           </div>
         </aside>
 
-        <!-- COLUMNA DERECHA: CONFIGURAR APUESTA -->
-        <section class="product-config">
-          <!-- Tabs modo de juego (sólo visual, sin JS obligatorio) -->
-          <div class="product-tabs" aria-label="Tipo de combinación">
+        <!-- COLUMNA DERECHA -->
+        <section class="col-12 col-lg-7 product-config">
+          <!-- Tabs -->
+          <div class="product-tabs mb-3" aria-label="Tipo de combinación">
             <button class="is-active" type="button">Sencilla</button>
             <button type="button">Múltiple</button>
             <button type="button">Favoritas</button>
           </div>
 
           <!-- Combinación 1 -->
-          <article class="combo-card">
+          <article class="combo-card mb-3">
             <header class="combo-card__header">
               <div>
                 <span class="combo-title">Combinación 1</span>
@@ -88,8 +88,7 @@
               </div>
             </header>
 
-            <!-- Números de ejemplo, sólo visual -->
-            <div class="number-row">
+            <div class="number-row mb-3">
               <span class="ball">04</span>
               <span class="ball">12</span>
               <span class="ball">23</span>
@@ -98,11 +97,8 @@
               <span class="ball ball--highlight">S</span>
             </div>
 
-            <!-- Cuántos sorteos jugar -->
             <div class="draws">
-              <div>
-                <strong>¿Cuántos sorteos quieres jugar?</strong>
-              </div>
+              <div><strong>¿Cuántos sorteos quieres jugar?</strong></div>
               <div class="draws__controls">
                 <button type="button" aria-label="Menos sorteos">−</button>
                 <span id="draw-count">1 sorteo</span>
@@ -111,7 +107,7 @@
             </div>
           </article>
 
-          <!-- BARRA RESUMEN INFERIOR -->
+          <!-- Resumen inferior -->
           <footer class="product-summary">
             <div class="product-summary__info">
               <span class="muted">Cupón Diario</span>
@@ -122,11 +118,12 @@
               <span class="product-summary__price" id="total-price">1,00 $</span>
             </div>
             <div class="product-summary__actions">
-              <a href="/catalogo.html" class="btn btn--ghost">Volver al catálogo</a>
-              <a href="/carrito.html" class="btn btn--primary">Añadir al carrito</a>
+              <a href="../catalogo.html" class="btn btn--ghost">Volver al catálogo</a>
+              <a href="../carrito.html" class="btn btn--primary">Añadir al carrito</a>
             </div>
           </footer>
         </section>
+
       </div>
     </section>
   </main>
@@ -219,7 +216,7 @@
         </div>
 
         <div class="footer-badges">
-          <img src="images/Juego_Responsable.png" alt="Juego responsable +18" />
+          <img src="../images/Juego_Responsable.png" alt="Juego responsable +18" />
         </div>
       </div>
     </div>
@@ -241,7 +238,12 @@
     </div>
   </footer>
 
-  <!-- JS opcional muy simple para actualizar precio por nº de sorteos -->
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+          crossorigin="anonymous"></script>
+
+  <!-- JS para actualizar precio por nº de sorteos -->
   <script>
     const PRICE_PER_DRAW = 1; // cambia a 2, 2.5, etc. según el juego
 
