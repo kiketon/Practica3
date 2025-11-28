@@ -656,7 +656,7 @@ img {
   font-size: 1.5rem;
   font-weight: bold;
   margin: 15px 0;
-  color: #f31212;
+  color: #ff3939;
 }
 
 .premio-card__amount {
@@ -672,7 +672,7 @@ img {
 }
 
 .premio-card__button {
-  background-color: #f31212;
+  background-color: #ff3939;
   color: #000;
   padding: 10px 20px;
   border-radius: 30px;
