@@ -3,21 +3,16 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Juegos LA DOCE – Carrito</title>
+  <title>Iniciar Sesión – LA DOCE</title>
 
-  <!-- Tu CSS compilado desde SASS -->
+  <!-- Tu CSS -->
   <link rel="stylesheet" href="scss/main.css">
-  <link rel="icon" href="logos.ico" type="image/x-icon">
-
-  <!-- Bootstrap JS (bundle con Popper) -->
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"
-    defer>
-  </script>
+  <link rel="icon" href="../logos.ico" type="image/x-icon">
 </head>
+
 <body>
+
+ <!-- ===== HEADER (TU MISMO HEADER) ===== -->
   <header class="site-header">
   <nav class="navbar navbar-expand-lg" style="background:#d32f2f;">
     <div class="container header__row d-flex justify-content-between align-items-center">
@@ -49,7 +44,7 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link nav__link " href="./login.html">Login</a>
+            <a class="nav-link nav__link nav__link--pill" href="./login.html">Login</a>
           </li>
 
           <li class="nav-item">
@@ -74,98 +69,41 @@
     </div>
   </nav>
 </header>
+  
+  <!-- ===== LOGIN CARD ===== -->
+  <main class="container" style="max-width: 420px; margin-top: 60px;">
 
-  <!-- Contenido principal -->
-  <main class="page-main">
-    <section class="container cart-page py-4">
-      <h1 class="page-title mb-4">Carrito de la compra</h1>
+    <div class="product-shell" style="padding: 32px;">
+      <h1 class="product-page__title text-center mb-4">Iniciar Sesión</h1>
 
-      <!-- Layout con Bootstrap -->
-      <div class="row g-4">
-        <!-- Lista de items -->
-        <section class="cart-list col-12 col-lg-8">
-          <!-- Cupón Diario -->
-          <article class="cart-item">
-            <div class="thumb has-img">
-              <img src="images/CDiario.png" alt="Cupón Diario">
-            </div>
-
-            <div class="cart-item__info">
-              <h3>Cupón Diario</h3>
-              <p class="muted">$10</p> <!-- precio unidad -->
-            </div>
-
-            <div class="qty">
-              <button class="btn btn--ghost qty-minus">-</button>
-              <span class="qty-value">2</span>   <!-- cantidad -->
-              <button class="btn btn--ghost qty-plus">+</button>
-            </div>
-
-            <div class="subtotal">$20</div>     <!-- subtotal de este cupón -->
-          </article>
-
-          <!-- Mega Sorteo Anual -->
-          <article class="cart-item">
-            <div class="thumb has-img">
-              <img src="images/Mmillonario.png" alt="Mega Sorteo Anual">
-            </div>
-
-            <div class="cart-item__info">
-              <h3>Mega Sorteo Anual</h3>
-              <p class="muted">$50</p>
-            </div>
-
-            <div class="qty">
-              <button class="btn btn--ghost qty-minus">-</button>
-              <span class="qty-value">2</span>
-              <button class="btn btn--ghost qty-plus">+</button>
-            </div>
-
-            <div class="subtotal">$50</div>
-          </article>
-
-          <!-- Rasca Verano -->
-          <article class="cart-item">
-            <div class="thumb has-img">
-              <img src="images/Rverano.png" alt="Rasca Verano">
-            </div>
-
-            <div class="cart-item__info">
-              <h3>Rasca Verano</h3>
-              <p class="muted">$15</p>
-            </div>
-
-            <div class="qty">
-              <button class="btn btn--ghost qty-minus">-</button>
-              <span class="qty-value">0</span>
-              <button class="btn btn--ghost qty-plus">+</button>
-            </div>
-
-            <div class="subtotal">$45</div>
-          </article>
-
-          <div class="cart-actions mt-2">
-            <a class="btn btn--ghost" href="catalogo.html">Seguir comprando</a>
-            <button class="btn btn--ghost" disabled>Vaciar carrito</button>
-          </div>
-        </section>
-
-        <!-- Resumen -->
-        <aside class="summary col-12 col-lg-4">
-          <h2>Carrito</h2>
-          <dl class="summary__row"><dt>Subtotal</dt><dd>$490</dd></dl>
-          <dl class="summary__row"><dt>Impuestos</dt><dd>$15</dd></dl>
-          <hr />
-          <dl class="summary__row summary__total"><dt>Total</dt><dd>$505</dd></dl>
-
-          <a class="btn btn--primary full mt-2" href="#">Proceder al pago</a>
-          <button class="btn btn--paypal full mt-2" type="button">Pagar con PayPal</button>
-        </aside>
+      <!-- ALERTA OCULTA -->
+      <div id="login-alert" class="alert alert-success d-none mb-3">
+        Bienvenido a la sesión.
       </div>
-    </section>
+
+      <form id="login-form">
+        <div class="mb-3">
+          <label class="form-label">Usuario</label>
+          <input type="text" class="form-control" required>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Contraseña</label>
+          <input type="password" class="form-control" required>
+        </div>
+
+        <button class="btn btn--primary w-100 mt-3" type="submit">Entrar</button>
+
+        <p class="text-center muted mt-3">
+          ¿No tienes cuenta? 
+          <a href="registro.html" class="text-brand">Registrarse</a>
+        </p>
+      </form>
+    </div>
+
   </main>
 
- <!-- Footer -->
+  <!-- Footer (igual que ya tienes) -->
   <footer class="site-footer site-footer--dark">
     <div class="container footer-cols">
       <!-- Col 1 -->
@@ -274,7 +212,18 @@
       </div>
     </div>
   </footer>
-  <!-- Tu JS del carrito (sumar cupones, etc.) -->
-  <script src="scrpt.js"></script>
+
+  <!-- Bootstrap + tu JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+          crossorigin="anonymous"></script>
+  <!-- JS ALERTA -->
+  <script>
+    document.getElementById("login-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      document.getElementById("login-alert").classList.remove("d-none");
+    });
+  </script>
+
 </body>
 </html>

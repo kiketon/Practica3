@@ -1,9 +1,12 @@
 .site-header {
   background-color: $brand;
   border-bottom: 4px solid $brand-dark;
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 1020; // por encima de componentes Bootstrap
+  left: 0;     // FALTA EN TU CÓDIGO
+  width: 100%; // FALTA EN TU CÓDIGO
+  z-index: 1020;
+
 
   .navbar {
     padding-block: .4rem;

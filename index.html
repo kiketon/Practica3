@@ -8,45 +8,63 @@
   <link rel="icon" href="logos.ico" type="image/x-icon">
 </head>
 <body>
-  <!-- Header / Navbar con Bootstrap -->
+ <!-- ===== HEADER (TU MISMO HEADER) ===== -->
   <header class="site-header">
-    <nav class="navbar navbar-expand-lg navbar-dark">
-      <div class="container header__row">
-        <!-- LOGO clicable -->
-        <a class="navbar-brand d-flex align-items-center gap-2" href="./index.html">
-          <img src="images/logos.png.png" alt="Juegos LA DOCE" height="28">
-          <span>Juegos <strong>LA DOCE</strong></span>
-        </a>
+  <nav class="navbar navbar-expand-lg" style="background:#d32f2f;">
+    <div class="container header__row d-flex justify-content-between align-items-center">
 
-        <!-- Botón hamburguesa -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
-                aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+      <!-- LOGO -->
+      <a class="navbar-brand d-flex align-items-center gap-2" href="./index.html">
+        <img src="images/logos.png.png" alt="Juegos LA DOCE" height="28">
+        <span>Juegos <strong>LA DOCE</strong></span>
+      </a>
 
-        <!-- Menú -->
-        <div class="collapse navbar-collapse" id="mainNav">
-          <ul class="navbar-nav ms-auto me-3">
-            <li class="nav-item">
-              <a class="nav-link active nav__link nav__link--pill" href="./index.html">Inicio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link nav__link" href="./catalogo.html">Productos</a>
-            </li>
-          </ul>
+      <!-- BOTÓN HAMBURGUESA -->
+      <button class="navbar-toggler" type="button" 
+              data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-          <!-- Icono carrito -->
-          <a class="cart" href="./carrito.html" aria-label="Carrito">
-            <svg viewBox="0 0 24 24" class="icon" aria-hidden="true">
-              <path d="M7 18a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm10 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM3 3h2l2.6 10.39A3 3 0 0 0 10.5 16h7.88a3 3 0 0 0 2.92-2.35L23 6H6"
-                    fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </a>
-        </div>
+      <!-- MENÚ -->
+      <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+
+        <!-- LINKS DEL MENÚ -->
+        <ul class="navbar-nav d-flex align-items-center gap-3">
+
+          <li class="nav-item">
+            <a class="nav-link nav__link nav__link--pill" href="./index.html">Inicio</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link nav__link" href="./catalogo.html">Productos</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link nav__link" href="./login.html">Login</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link nav__link " href="./registro.html">Registrarse</a>
+          </li>
+
+          <!-- ICONO CARRITO -->
+          <li class="nav-item">
+            <a class="cart" href="./carrito.html" aria-label="Carrito">
+              <svg viewBox="0 0 24 24" class="icon" aria-hidden="true">
+                <path d="M7 18a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm10 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM3 3h2l2.6 10.39A3 3 0 0 0 10.5 16h7.88a3 3 0 0 0 2.92-2.35L23 6H6"
+                      fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </li>
+
+        </ul>
+
       </div>
-    </nav>
-  </header>
+
+    </div>
+  </nav>
+</header>
 
   <!-- Main -->
   <main class="page-main">
